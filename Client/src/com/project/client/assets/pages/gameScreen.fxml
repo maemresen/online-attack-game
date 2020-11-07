@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<Pane style="-fx-background-color: #878683;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.project.client.controller.GameScreenController">
+    <AnchorPane>
+        <VBox alignment="CENTER" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+            </padding>
+            <Label text="Network Fights" textFill="#ff8732">
+                <font>
+                    <Font size="38.0"/>
+                </font>
+            </Label>
+            <HBox alignment="CENTER">
+                <AnchorPane prefHeight="67.0" prefWidth="1058.0">
+                    <VBox alignment="CENTER" spacing="20.0" AnchorPane.leftAnchor="0.0">
+                        <Label id="userName1" fx:id="creatorNameLabel" text="User Name 1"
+                               textFill="#ffb812">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <ProgressBar fx:id="creatorHealth" prefHeight="23.0" prefWidth="200.0"
+                                     progress="0.67"/>
+                    </VBox>
+                    <VBox alignment="CENTER" spacing="20.0" AnchorPane.rightAnchor="0.0">
+                        <Label id="userName2" fx:id="opponentNameLabel" text="Waiting for opponent..."
+                               textFill="#ffb812">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <ProgressBar fx:id="opponentHealth" prefWidth="200.0" progress="0.76"/>
+                    </VBox>
+                    <HBox alignment="CENTER" layoutX="406.0" layoutY="9.0" spacing="60.0">
+                        <ImageView fitHeight="97.0" fitWidth="75.0" onMouseClicked="#attack"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../img/attack.png"/>
+                        </ImageView>
+                        <ImageView fitHeight="93.0" fitWidth="117.0" onMouseClicked="#defence"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../img/shield.png"/>
+                        </ImageView>
+                    </HBox>
+                </AnchorPane>
+            </HBox>
+            <HBox alignment="CENTER" spacing="40.0">
+                <VBox alignment="CENTER" prefHeight="379.0" prefWidth="942.0" spacing="30.0">
+                    <ListView fx:id="msgListView" prefHeight="305.0" prefWidth="448.0"
+                              style="-fx-background-radius: 20;" stylesheets="@../css/button.css"/>
+                    <TextField fx:id="msgInput" onAction="#sendMessage" prefHeight="55.0" prefWidth="689.0"
+                               promptText="Type Your Message Here" style="-fx-background-radius: 12;"/>
+                </VBox>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#exitGame" text="Go Back"/>
+        </VBox>
+    </AnchorPane>
+</Pane>
