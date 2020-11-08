@@ -3,10 +3,14 @@ Computer Networks Course (CSE208) project
 
 An example simple online game developed with JavaFX project.
 
-**Modules:**
+---
+
+**Modules**
 * server: The server for the online game (CLI App)
 * client: Each player that is playing game (JavaFX App)
 * core: common helper methods that is using by both client and server modules  
+
+---
 
 **Usage**
 1. First you should start **server** module to start a game server.
