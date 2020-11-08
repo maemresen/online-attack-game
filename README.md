@@ -1,5 +1,6 @@
 # Online Attack Game
-An example simple online game developed with JavaFX project for my Computer Networks course.
+Computer Networks Course (CSE208)
+An example simple online game developed with JavaFX project.
 
 Modules:
 * server: The server for the online game (CLI App)
