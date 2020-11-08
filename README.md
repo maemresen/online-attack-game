@@ -1,5 +1,6 @@
 # Online Attack Game
-Computer Networks Course (CSE208)
+Computer Networks Course (CSE208) project
+
 An example simple online game developed with JavaFX project.
 
 Modules:
